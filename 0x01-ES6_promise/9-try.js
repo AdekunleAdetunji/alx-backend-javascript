@@ -1,7 +1,7 @@
-export default function guardrail(func) {
+export default function guardrail(mathFunction) {
   const queue = [];
   try {
-    queue.push(func());
+    queue.push(mathFunction());
   } catch (err) {
     queue.push(err.toString());
   } finally {
